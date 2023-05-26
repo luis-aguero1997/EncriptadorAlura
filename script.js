@@ -15,6 +15,10 @@ function BtnDesncriptar(){
     mensaje.style.backgroundImage = "none";
 }
 
+function BtnCopy(){
+    copyText();
+}
+
 
 function Encriptar(TMensaje){
     let matrizCodigo = [["e", "enter"], ["i", "imes",], ["o", "ober"], ["a", "ai"], ["u", "ufat"]];
@@ -39,4 +43,10 @@ function Desencriptar(TMensaje){
     } 
     return TMensaje;
 }
+
+function copyText() {
+    const copyText = document.querySelector(".TxtMensaje");
+    copyText.select();
+    document.execCommand("copy");
+  }
 
